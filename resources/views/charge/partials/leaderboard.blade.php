@@ -3,9 +3,9 @@
         <div class="mb-10 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
                 <p class="font-mono text-[10px] uppercase tracking-[0.35em] text-charge-fx">Standings</p>
-                <h2 id="rankings-title" class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">Current Season Race</h2>
+                <h2 id="rankings-title" class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">Season Standings</h2>
             </div>
-            <p class="font-mono text-xs text-zinc-500">Updated post Match 4</p>
+            <p class="font-mono text-xs text-zinc-500">After Match 4 of 6</p>
         </div>
 
         <div class="charge-glass overflow-hidden rounded-2xl">

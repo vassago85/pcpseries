@@ -4,7 +4,7 @@
             ['title' => '2026 Season', 'sub' => 'National series'],
             ['title' => '6 Match Series', 'sub' => 'Full calendar'],
             ['title' => 'PRS Style Format', 'sub' => 'Barricade stages'],
-            ['title' => 'National Rankings', 'sub' => 'Live standings'],
+            ['title' => 'National Rankings', 'sub' => 'Series standings'],
         ] as $stat)
             <article class="charge-glass charge-glass-hover rounded-xl px-6 py-8 text-center">
                 <p class="text-lg font-bold tracking-tight text-white sm:text-xl">{{ $stat['title'] }}</p>

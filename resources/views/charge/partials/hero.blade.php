@@ -4,7 +4,6 @@
     <div class="relative mx-auto grid max-w-7xl gap-12 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-8 lg:py-20">
         <div class="charge-animate-in">
             <p class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-zinc-400 charge-pill-fx">
-                <span class="charge-live-dot h-1.5 w-1.5 rounded-full bg-charge-fx"></span>
                 Powered by FX Airguns &amp; Element Optics
             </p>
 
@@ -28,14 +27,11 @@
             </div>
         </div>
 
-        <aside class="charge-animate-in-delay-1 charge-glass relative overflow-hidden rounded-2xl p-1" aria-label="Season dashboard preview">
+        <aside class="charge-animate-in-delay-1 charge-glass relative overflow-hidden rounded-2xl p-1" aria-label="Standings preview">
             <div class="rounded-xl bg-charge-elevated/80 p-5 sm:p-6">
                 <div class="mb-5 flex items-center justify-between border-b border-white/[0.06] pb-4">
-                    <div>
-                        <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-zinc-500">Live</p>
-                        <h2 class="text-base font-semibold text-white">Current Season Race</h2>
-                    </div>
-                    <span class="rounded bg-charge-fx/15 px-2 py-0.5 font-mono text-[10px] text-charge-fx">R4/6</span>
+                    <h2 class="text-base font-semibold text-white">Season Standings</h2>
+                    <span class="rounded bg-charge-fx/15 px-2 py-0.5 font-mono text-[10px] text-charge-fx">Match 4/6</span>
                 </div>
 
                 <ul class="space-y-2.5" role="list">
