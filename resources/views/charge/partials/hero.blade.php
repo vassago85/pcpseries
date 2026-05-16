@@ -1,5 +1,3 @@
-@include('charge.partials.data')
-
 <section class="relative overflow-hidden border-b border-white/[0.06]" aria-labelledby="plenum-hero">
     <div class="charge-crosshair pointer-events-none absolute inset-0 opacity-40" aria-hidden="true"></div>
 

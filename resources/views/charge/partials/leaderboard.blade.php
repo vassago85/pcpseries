@@ -1,5 +1,3 @@
-@include('charge.partials.data')
-
 <section id="rankings" class="border-b border-white/[0.06] py-16 sm:py-24" aria-labelledby="rankings-title">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mb-10 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
