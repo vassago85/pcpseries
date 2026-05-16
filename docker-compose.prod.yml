@@ -33,7 +33,7 @@ services:
       - pcpseries-internal
       - nginx-proxy-manager_default
     healthcheck:
-      test: ["CMD", "curl", "-fsS", "http://localhost/pcp-series-mockup"]
+      test: ["CMD", "curl", "-fsS", "http://localhost/charge"]
       interval: 30s
       timeout: 10s
       retries: 3

@@ -6,4 +6,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/pcp-series-mockup', 'pcp-series.mockup')->name('pcp-series.mockup');
+Route::view('/charge', 'charge.mockup')->name('charge');
+Route::view('/plenum', 'charge.mockup')->name('plenum');
+
+Route::redirect('/pcp-series-mockup', '/charge', 301);

@@ -9,39 +9,49 @@
     --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
     --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    --color-pcp-bg: #0a0c0f;
-    --color-pcp-surface: #12161c;
-    --color-pcp-fx: #3d9e50;
-    --color-pcp-element: #c41e3a;
+    --color-charge-bg: #06080b;
+    --color-charge-surface: #0e1116;
+    --color-charge-elevated: #141a22;
+    --color-charge-fx: #3d9e50;
+    --color-charge-element: #c41e3a;
+    --color-charge-muted: #71717a;
 }
 
 @layer base {
     html {
         scroll-behavior: smooth;
     }
+
+    body {
+        @apply bg-charge-bg text-zinc-100;
+    }
 }
 
 @layer utilities {
-    .pcp-grid-bg {
+    .charge-grid-bg {
         background-image:
-            linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-        background-size: 48px 48px;
+            linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+        background-size: 40px 40px;
     }
 
-    .pcp-glass {
-        @apply border border-white/10 bg-white/5 backdrop-blur-md;
+    .charge-glass {
+        @apply border border-white/[0.08] bg-white/[0.04] shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-xl;
     }
 
-    .pcp-crosshair::before,
-    .pcp-crosshair::after {
+    .charge-glass-hover {
+        @apply transition duration-300 hover:border-white/15 hover:bg-white/[0.06];
+    }
+
+    .charge-crosshair::before,
+    .charge-crosshair::after {
         content: '';
         position: absolute;
-        background: rgba(255, 255, 255, 0.06);
         pointer-events: none;
+        background: rgba(255, 255, 255, 0.05);
     }
 
-    .pcp-crosshair::before {
+    .charge-crosshair::before {
         top: 50%;
         left: 0;
         right: 0;
@@ -49,7 +59,7 @@
         transform: translateY(-50%);
     }
 
-    .pcp-crosshair::after {
+    .charge-crosshair::after {
         left: 50%;
         top: 0;
         bottom: 0;
@@ -57,9 +67,66 @@
         transform: translateX(-50%);
     }
 
-    .pcp-hero-rifle-glow {
-        background: radial-gradient(ellipse 70% 50% at 50% 80%, rgba(61, 158, 80, 0.22), transparent 70%);
+    .charge-headline {
+        @apply text-[clamp(4.5rem,18vw,9rem)] font-bold leading-[0.85] tracking-[-0.04em];
+        background: linear-gradient(180deg, #fff 0%, #a1a1aa 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
     }
+
+    .charge-glow-fx {
+        background: radial-gradient(ellipse 60% 50% at 70% 20%, rgba(61, 158, 80, 0.15), transparent 70%);
+    }
+
+    .charge-glow-element {
+        background: radial-gradient(ellipse 50% 40% at 10% 80%, rgba(196, 30, 58, 0.08), transparent 70%);
+    }
+
+    .charge-animate-in {
+        animation: charge-fade-up 0.7s ease-out both;
+    }
+
+    .charge-animate-in-delay-1 {
+        animation: charge-fade-up 0.7s ease-out 0.1s both;
+    }
+
+    .charge-animate-in-delay-2 {
+        animation: charge-fade-up 0.7s ease-out 0.2s both;
+    }
+
+    .charge-row-hover {
+        @apply transition duration-200 hover:bg-white/[0.04] hover:border-white/10;
+    }
+
+    .charge-pill-fx {
+        box-shadow: 0 0 20px rgba(61, 158, 80, 0.15);
+    }
+}
+
+@keyframes charge-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes charge-pulse-soft {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.charge-live-dot {
+    animation: charge-pulse-soft 2s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

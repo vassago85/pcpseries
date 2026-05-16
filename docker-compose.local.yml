@@ -2,7 +2,7 @@
 #
 #   docker compose -f docker-compose.local.yml up --build
 #
-# Mockup: http://localhost:8089/pcp-series-mockup
+# Mockup: http://localhost:8089/plenum (also /charge)
 
 services:
   app:

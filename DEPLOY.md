@@ -5,7 +5,7 @@
 - **Server:** `41.72.157.26` (user `paul`)
 - **Path:** `/opt/pcpseries`
 - **Domain:** `https://pcp.charsleydigital.co.za`
-- **Mockup URL:** `/pcp-series-mockup`
+- **Mockup URLs:** `/plenum` (primary), `/charge` (alias), legacy `/pcp-series-mockup` → `/charge`
 
 ## First-time server setup
 
@@ -75,4 +75,4 @@ cd pcpseries
 docker compose -f docker-compose.local.yml up --build
 ```
 
-Open: http://localhost:8089/pcp-series-mockup
+Open: http://localhost:8089/plenum (or http://localhost:8089/charge)
