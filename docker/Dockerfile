@@ -59,6 +59,6 @@ RUN chmod +x /entrypoint.sh
 EXPOSE 80
 
 HEALTHCHECK --interval=30s --timeout=10s --start-period=45s --retries=3 \
-    CMD curl -fsS http://localhost/pcp-series-mockup > /dev/null || exit 1
+    CMD curl -fsS http://localhost/plenum > /dev/null || exit 1
 
 ENTRYPOINT ["/entrypoint.sh"]

@@ -3,10 +3,6 @@
 @section('title', 'PLENUM — South African PCP Precision Series')
 
 @section('content')
-    @php
-        $standings = require resource_path('views/charge/data/standings.php');
-    @endphp
-
     @include('charge.partials.nav')
 
     <main>
