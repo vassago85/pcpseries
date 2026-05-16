@@ -13,6 +13,10 @@
                 Stored pressure. Released with precision.
             </p>
 
+            <p class="mt-4 max-w-lg border-l-2 border-charge-fx/30 pl-4 text-sm leading-relaxed text-zinc-500">
+                <span class="font-semibold text-zinc-300">Plenum</span> — the pressurized air reservoir in a PCP rifle, where regulated charge is held before each shot.
+            </p>
+
             <p class="mt-5 max-w-lg text-base leading-relaxed text-zinc-400 sm:text-lg">
                 South Africa's national PCP precision series. Follow rankings, compete across the calendar, and track your season on one platform.
             </p>

@@ -7,6 +7,7 @@
 
     <main>
         @include('charge.partials.hero')
+        @include('charge.partials.definition')
         @include('charge.partials.stats')
         @include('charge.partials.leaderboard')
         @include('charge.partials.next-match')
