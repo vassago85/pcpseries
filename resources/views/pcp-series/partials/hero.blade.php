@@ -23,7 +23,7 @@
                 Performance.
             </h1>
             <p class="mt-6 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg">
-                The home of PRS-style PCP competition in South Africa. Register for matches, follow rankings, track your season and compete against the country’s best shooters.
+                The home of PRS-style PCP competition in South Africa. Register for matches, follow rankings, track your season and compete against the country's best shooters.
             </p>
             <div class="mt-8 flex flex-wrap gap-3">
                 <a href="#matches" class="inline-flex items-center justify-center rounded-lg bg-pcp-fx px-6 py-3 text-sm font-semibold text-black transition hover:bg-pcp-fx/90">
@@ -35,61 +35,83 @@
             </div>
         </div>
 
-        <aside class="pcp-glass relative overflow-hidden rounded-2xl p-5 sm:p-6" aria-label="Current season race preview">
-            <div class="absolute inset-0 bg-gradient-to-br from-white/[0.04] to-transparent" aria-hidden="true"></div>
-            <div class="relative">
-                <div class="mb-5 flex items-center justify-between gap-2 border-b border-white/10 pb-4">
-                    <div>
-                        <p class="text-[10px] font-semibold uppercase tracking-[0.25em] text-zinc-500">Live board</p>
-                        <h2 class="text-lg font-semibold text-white">2026 Season Race</h2>
+        <div class="flex flex-col gap-4">
+            <figure class="pcp-glass pcp-hero-rifle-glow relative overflow-hidden rounded-2xl border border-pcp-fx/20">
+                <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-pcp-bg via-pcp-bg/60 to-transparent" aria-hidden="true"></div>
+                <div class="relative flex min-h-[200px] items-end justify-center px-4 pt-6 sm:min-h-[240px]">
+                    <img
+                        src="{{ asset('images/pcp/hero-fx-rifle.webp') }}"
+                        alt="FX precision PCP rifle, official series partner equipment"
+                        width="800"
+                        height="400"
+                        class="max-h-[220px] w-full max-w-md object-contain object-bottom drop-shadow-[0_20px_40px_rgba(0,0,0,0.55)] sm:max-h-[260px]"
+                        loading="eager"
+                        fetchpriority="high"
+                        decoding="async"
+                    >
+                </div>
+                <figcaption class="relative border-t border-white/10 px-4 py-3">
+                    <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-pcp-fx">Official partner</p>
+                    <p class="mt-0.5 text-sm font-medium text-white">FX Airguns <span class="text-zinc-600">•</span> Element Optics</p>
+                </figcaption>
+            </figure>
+
+            <aside class="pcp-glass relative overflow-hidden rounded-2xl p-5 sm:p-6" aria-label="Current season race preview">
+                <div class="absolute inset-0 bg-gradient-to-br from-white/[0.04] to-transparent" aria-hidden="true"></div>
+                <div class="relative">
+                    <div class="mb-5 flex items-center justify-between gap-2 border-b border-white/10 pb-4">
+                        <div>
+                            <p class="text-[10px] font-semibold uppercase tracking-[0.25em] text-zinc-500">Live board</p>
+                            <h2 class="text-lg font-semibold text-white">2026 Season Race</h2>
+                        </div>
+                        <span class="font-mono text-xs text-pcp-fx">ROUND 4 / 6</span>
                     </div>
-                    <span class="font-mono text-xs text-pcp-fx">ROUND 4 / 6</span>
-                </div>
 
-                <ul class="space-y-3" role="list">
-                    @foreach ($leaders as $shooter)
-                        <li class="flex items-center gap-3 rounded-xl border border-white/5 bg-black/20 px-3 py-3">
-                            <span class="font-mono text-xs font-semibold text-zinc-500">#{{ str_pad($shooter['rank'], 2, '0', STR_PAD_LEFT) }}</span>
-                            <div class="min-w-0 flex-1">
-                                <p class="truncate text-sm font-semibold text-white">{{ $shooter['name'] }}</p>
-                                <p class="font-mono text-xs text-zinc-500">{{ $shooter['score'] }} match</p>
-                            </div>
-                            <div class="text-right">
-                                <p class="font-mono text-sm font-semibold tabular-nums text-white">{{ $shooter['points'] }} <span class="text-[10px] font-normal text-zinc-500">pts</span></p>
-                                @if ($shooter['dir'] === 'up')
-                                    <p class="flex items-center justify-end gap-0.5 text-xs font-medium text-pcp-fx">
-                                        @include('pcp-series.partials.icons', ['name' => 'trending-up', 'class' => 'h-3 w-3'])
-                                        {{ $shooter['delta'] }}
-                                    </p>
-                                @elseif ($shooter['dir'] === 'down')
-                                    <p class="flex items-center justify-end gap-0.5 text-xs font-medium text-pcp-element">
-                                        @include('pcp-series.partials.icons', ['name' => 'trending-down', 'class' => 'h-3 w-3'])
-                                        {{ $shooter['delta'] }}
-                                    </p>
-                                @else
-                                    <p class="flex items-center justify-end gap-0.5 text-xs font-medium text-zinc-500">
-                                        @include('pcp-series.partials.icons', ['name' => 'minus', 'class' => 'h-3 w-3'])
-                                        {{ $shooter['delta'] }}
-                                    </p>
-                                @endif
-                            </div>
-                        </li>
-                    @endforeach
-                </ul>
+                    <ul class="space-y-3" role="list">
+                        @foreach ($leaders as $shooter)
+                            <li class="flex items-center gap-3 rounded-xl border border-white/5 bg-black/20 px-3 py-3">
+                                <span class="font-mono text-xs font-semibold text-zinc-500">#{{ str_pad($shooter['rank'], 2, '0', STR_PAD_LEFT) }}</span>
+                                <div class="min-w-0 flex-1">
+                                    <p class="truncate text-sm font-semibold text-white">{{ $shooter['name'] }}</p>
+                                    <p class="font-mono text-xs text-zinc-500">{{ $shooter['score'] }} match</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="font-mono text-sm font-semibold tabular-nums text-white">{{ $shooter['points'] }} <span class="text-[10px] font-normal text-zinc-500">pts</span></p>
+                                    @if ($shooter['dir'] === 'up')
+                                        <p class="flex items-center justify-end gap-0.5 text-xs font-medium text-pcp-fx">
+                                            @include('pcp-series.partials.icons', ['name' => 'trending-up', 'class' => 'h-3 w-3'])
+                                            {{ $shooter['delta'] }}
+                                        </p>
+                                    @elseif ($shooter['dir'] === 'down')
+                                        <p class="flex items-center justify-end gap-0.5 text-xs font-medium text-pcp-element">
+                                            @include('pcp-series.partials.icons', ['name' => 'trending-down', 'class' => 'h-3 w-3'])
+                                            {{ $shooter['delta'] }}
+                                        </p>
+                                    @else
+                                        <p class="flex items-center justify-end gap-0.5 text-xs font-medium text-zinc-500">
+                                            @include('pcp-series.partials.icons', ['name' => 'minus', 'class' => 'h-3 w-3'])
+                                            {{ $shooter['delta'] }}
+                                        </p>
+                                    @endif
+                                </div>
+                            </li>
+                        @endforeach
+                    </ul>
 
-                <div class="mt-5 rounded-xl border border-white/10 bg-black/30 px-4 py-3">
-                    <p class="text-[10px] font-semibold uppercase tracking-wider text-zinc-500">Rifle setup</p>
-                    <p class="mt-1 text-sm font-medium text-white">FX Panthera <span class="text-zinc-600">•</span> Element Theos</p>
-                </div>
-
-                <div class="mt-4 flex items-center justify-between rounded-lg border border-pcp-fx/20 bg-pcp-fx/5 px-3 py-2.5">
-                    <div class="flex items-center gap-2 text-xs text-zinc-300">
-                        @include('pcp-series.partials.icons', ['name' => 'calendar', 'class' => 'h-3.5 w-3.5 text-pcp-fx'])
-                        <span>Next Match: <strong class="text-white">Legends Farm</strong></span>
+                    <div class="mt-5 rounded-xl border border-white/10 bg-black/30 px-4 py-3">
+                        <p class="text-[10px] font-semibold uppercase tracking-wider text-zinc-500">Rifle setup</p>
+                        <p class="mt-1 text-sm font-medium text-white">FX Panthera <span class="text-zinc-600">•</span> Element Theos</p>
                     </div>
-                    <span class="font-mono text-[10px] text-pcp-fx">MAR 28</span>
+
+                    <div class="mt-4 flex items-center justify-between rounded-lg border border-pcp-fx/20 bg-pcp-fx/5 px-3 py-2.5">
+                        <div class="flex items-center gap-2 text-xs text-zinc-300">
+                            @include('pcp-series.partials.icons', ['name' => 'calendar', 'class' => 'h-3.5 w-3.5 text-pcp-fx'])
+                            <span>Next Match: <strong class="text-white">Legends Farm</strong></span>
+                        </div>
+                        <span class="font-mono text-[10px] text-pcp-fx">MAR 28</span>
+                    </div>
                 </div>
-            </div>
-        </aside>
+            </aside>
+        </div>
     </div>
 </section>
