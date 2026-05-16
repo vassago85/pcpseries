@@ -33,6 +33,10 @@ if [ "$APP_ENV" = "production" ]; then
     php artisan config:cache
     php artisan route:cache
     php artisan view:cache
+    if [ ! -f /var/www/html/public/build/manifest.json ]; then
+        echo "ERROR: Vite build missing (public/build/manifest.json). Rebuild the Docker image." >&2
+        exit 1
+    fi
 fi
 
 chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache

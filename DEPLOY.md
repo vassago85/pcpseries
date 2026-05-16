@@ -40,6 +40,23 @@ docker compose -f docker-compose.prod.yml up -d
 |------|------|-----------|
 | A | `pcp` | `41.72.157.26` |
 
+## CSS broken over HTTPS?
+
+NPM terminates SSL and forwards HTTP to the container. The app must trust `X-Forwarded-Proto` and use `APP_URL=https://...` (not `http://`). After pulling the proxy fix:
+
+```bash
+cd /opt/pcpseries
+git pull origin main
+grep -q '^ASSET_URL=' .env || echo 'ASSET_URL=' >> .env
+sed -i 's|^APP_URL=.*|APP_URL=https://pcp.charsleydigital.co.za|' .env
+docker compose -f docker-compose.prod.yml build --no-cache app
+docker compose -f docker-compose.prod.yml up -d --force-recreate app
+docker compose -f docker-compose.prod.yml exec app php artisan optimize:clear
+docker compose -f docker-compose.prod.yml exec app php artisan optimize
+```
+
+Hard-refresh the browser (Ctrl+F5). Check CSS loads: `https://pcp.charsleydigital.co.za/build/assets/` should not 404.
+
 ## Updates (after every `git pull`)
 
 **Rebuild required** — code is baked into the image.
