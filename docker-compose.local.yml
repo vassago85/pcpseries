@@ -1,0 +1,40 @@
+# PCP Series — Docker Desktop (local)
+#
+#   docker compose -f docker-compose.local.yml up --build
+#
+# Mockup: http://localhost:8089/pcp-series-mockup
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: pcpseries-app:local
+    container_name: pcpseries-app-local
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      APP_ENV: local
+      APP_DEBUG: "true"
+      APP_URL: http://localhost:8089
+      APP_TIMEZONE: Africa/Johannesburg
+      TZ: Africa/Johannesburg
+      DB_CONNECTION: sqlite
+      SESSION_DRIVER: file
+      CACHE_STORE: file
+      QUEUE_CONNECTION: sync
+    ports:
+      - "8089:80"
+    volumes:
+      - pcpseries-sqlite:/var/www/html/database
+    networks:
+      - pcpseries-local
+
+networks:
+  pcpseries-local:
+    driver: bridge
+
+volumes:
+  pcpseries-sqlite:
+    driver: local
