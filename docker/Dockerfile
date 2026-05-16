@@ -1,36 +1,37 @@
-FROM php:8.4-fpm-alpine
+FROM php:8.4-fpm-alpine3.20
 
 RUN apk add --no-cache \
     nginx \
     supervisor \
     curl \
-    libpng-dev \
-    libjpeg-turbo-dev \
-    freetype-dev \
     libzip-dev \
     zip \
     unzip \
     oniguruma-dev \
     icu-dev \
+    icu-libs \
     sqlite-dev \
+    linux-headers \
     nodejs \
     npm \
-    tzdata
+    tzdata \
+    $PHPIZE_DEPS
 
 ENV TZ=Africa/Johannesburg
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-ADD --chmod=0755 https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
-RUN install-php-extensions \
+# Use docker-php-ext-install (official image) — more reliable than install-php-extensions on Alpine/ARM
+RUN docker-php-ext-install -j"$(nproc)" \
     pdo_sqlite \
     mbstring \
     exif \
     pcntl \
     bcmath \
-    gd \
-    zip \
+    opcache \
     intl \
-    opcache
+    zip \
+    && apk del --no-cache $PHPIZE_DEPS \
+    && rm -rf /tmp/pear /var/cache/apk/*
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 

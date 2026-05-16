@@ -78,3 +78,5 @@ docker compose -f docker-compose.local.yml up --build
 Open: http://localhost:8089/plenum (or http://localhost:8089/charge)
 
 **Important:** Production code lives inside the Docker image. After `git pull` you must **rebuild** the `app` image — a pull alone does not update the running container.
+
+If the build fails on `install-php-extensions`, pull latest `main` (Dockerfile uses `docker-php-ext-install` instead).
