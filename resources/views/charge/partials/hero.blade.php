@@ -3,8 +3,12 @@
 
     <div class="relative mx-auto grid max-w-7xl gap-12 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-8 lg:py-20">
         <div class="charge-animate-in">
-            <p class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-zinc-400 charge-pill-fx">
-                Powered by FX Airguns &amp; Element Optics
+            <p class="mb-6 inline-flex flex-wrap items-center gap-x-3 gap-y-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.15em] text-zinc-400 charge-pill-fx">
+                <span>Powered by</span>
+                <span class="inline-flex items-center gap-3">
+                    <img src="{{ asset('images/partners/fx-airguns.png') }}" alt="FX Airguns" class="h-4 w-auto opacity-90" width="80" height="16" loading="eager" />
+                    <img src="{{ asset('images/partners/element-optics.png') }}" alt="Element Optics" class="h-3.5 w-auto opacity-90" width="90" height="14" loading="eager" />
+                </span>
             </p>
 
             <h1 id="plenum-hero" class="charge-headline">PLENUM</h1>
