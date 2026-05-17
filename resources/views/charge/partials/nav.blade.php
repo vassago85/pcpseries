@@ -22,7 +22,7 @@
             <a href="{{ $badgesRoute }}" class="transition hover:text-white">Badges</a>
         </nav>
         <a href="{{ $homeRoute }}#matches" class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white transition hover:border-charge-fx/40 hover:bg-charge-fx/10">
-            Enter
+            View Matches
         </a>
     </div>
 </header>

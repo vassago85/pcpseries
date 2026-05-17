@@ -1,6 +1,6 @@
 @extends('layouts.charge')
 
-@section('title', 'PLENUM Shooter Profile — Competitor Identity')
+@section('title', 'PLENUM Shooter Profile — Match Performance')
 
 @section('content')
     @php
@@ -80,7 +80,7 @@
         <section class="relative border-b border-white/[0.06] pt-8 sm:pt-10" aria-labelledby="shooter-hero">
             <div class="charge-crosshair pointer-events-none absolute inset-0 opacity-25" aria-hidden="true"></div>
             <div class="relative mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8 lg:pb-14">
-                <p class="font-mono text-[10px] uppercase tracking-[0.35em] text-zinc-500">Competitor Identity</p>
+                <p class="font-mono text-[10px] uppercase tracking-[0.35em] text-zinc-500">Shooter Profile</p>
                 <div class="mt-4 charge-glass overflow-hidden rounded-2xl p-5 sm:p-8">
                     <div class="grid gap-8 lg:grid-cols-[auto_1fr]">
                         <div class="mx-auto h-28 w-28 rounded-2xl border border-white/15 bg-gradient-to-br from-charge-fx/35 to-charge-element/20 p-1 sm:h-36 sm:w-36 lg:mx-0">
@@ -131,7 +131,7 @@
 
         <section class="border-b border-white/[0.06] py-10 sm:py-12" aria-labelledby="performance-cards">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <h2 id="performance-cards" class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Performance Cards</h2>
+                <h2 id="performance-cards" class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Match Performance</h2>
                 <div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
                     @foreach ($performanceCards as $card)
                         <article class="charge-glass charge-glass-hover rounded-xl p-4">
@@ -224,8 +224,8 @@
         <section class="border-b border-white/[0.06] py-10 sm:py-12" aria-labelledby="badges">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-wrap items-end justify-between gap-3">
-                    <h2 id="badges" class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Badge Progression</h2>
-                    <p class="font-mono text-[10px] uppercase tracking-wider text-zinc-500">Icons + descriptions + unlock logic</p>
+                    <h2 id="badges" class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Earned Match Badges</h2>
+                    <p class="font-mono text-[10px] uppercase tracking-wider text-zinc-500">Icon + definition + unlock criteria</p>
                 </div>
                 <div class="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
                     @foreach ($earnedBadges as $badge)
@@ -281,7 +281,7 @@
 
         <section class="border-b border-white/[0.06] py-10 sm:py-12" aria-labelledby="head-to-head">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <h2 id="head-to-head" class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Head-to-Head vs Division Average</h2>
+                <h2 id="head-to-head" class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Division Benchmark</h2>
                 <div class="mt-5 charge-glass rounded-2xl p-5 sm:p-6">
                     <div class="space-y-4">
                         @foreach ($comparison as $row)

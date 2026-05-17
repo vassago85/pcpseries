@@ -52,7 +52,7 @@
         <section class="relative border-b border-white/[0.06] py-12 sm:py-16" aria-labelledby="badges-hero">
             <div class="charge-crosshair pointer-events-none absolute inset-0 opacity-25" aria-hidden="true"></div>
             <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <p class="font-mono text-[10px] uppercase tracking-[0.35em] text-zinc-500">Shooter Progression Platform</p>
+                <p class="font-mono text-[10px] uppercase tracking-[0.35em] text-zinc-500">PRS Badge System</p>
                 <h1 id="badges-hero" class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">Performance Badges</h1>
                 <p class="mt-4 max-w-3xl text-base text-zinc-400 sm:text-lg">
                     Earned through match results, consistency, precision and progression.
@@ -61,7 +61,7 @@
                 <div class="mt-8 grid gap-4 lg:grid-cols-[1fr_24rem]">
                     <article class="charge-glass rounded-2xl p-5 sm:p-6">
                         <p class="text-sm leading-relaxed text-zinc-300">
-                            Badges are automatically earned from match data, rankings, shooter profiles and season performance.
+                            Badges are automatically earned from match data, standings, shooter profiles and season performance.
                             <span class="text-zinc-500">No manual admin work required.</span>
                         </p>
                     </article>
