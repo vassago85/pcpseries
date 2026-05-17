@@ -295,13 +295,13 @@
                                     <p class="font-medium text-zinc-300">{{ $row['metric'] }}</p>
                                     <p class="font-mono text-xs text-zinc-500">You {{ $row['shooter'] }} <span class="mx-1">/</span> Div {{ $row['division'] }}</p>
                                 </div>
-                                <div class="grid gap-2 sm:grid-cols-2">
-                                    <div class="h-2.5 overflow-hidden rounded-full bg-black/40">
-                                        <div class="h-full rounded-full bg-charge-fx" style="width: {{ $shooterPct }}%"></div>
-                                    </div>
-                                    <div class="h-2.5 overflow-hidden rounded-full bg-black/40">
-                                        <div class="h-full rounded-full bg-zinc-500/70" style="width: {{ $divisionPct }}%"></div>
-                                    </div>
+                                <div class="h-3 overflow-hidden rounded-full bg-black/40">
+                                    <div class="h-full rounded-full bg-zinc-500/65" style="width: {{ $divisionPct }}%"></div>
+                                    <div class="-mt-3 h-3 rounded-full bg-charge-fx/95" style="width: {{ $shooterPct }}%"></div>
+                                </div>
+                                <div class="mt-1 flex items-center gap-4 font-mono text-[10px] uppercase tracking-wide text-zinc-500">
+                                    <span class="inline-flex items-center gap-1"><span class="h-1.5 w-1.5 rounded-full bg-charge-fx"></span>You</span>
+                                    <span class="inline-flex items-center gap-1"><span class="h-1.5 w-1.5 rounded-full bg-zinc-500/80"></span>Division</span>
                                 </div>
                             </article>
                         @endforeach
