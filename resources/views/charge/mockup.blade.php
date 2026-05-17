@@ -12,6 +12,7 @@
         @include('charge.partials.leaderboard')
         @include('charge.partials.next-match')
         @include('charge.partials.features')
+        @include('charge.partials.badges')
         @include('charge.partials.admin-lifecycle')
         @include('charge.partials.partners')
         @include('charge.partials.cta')

@@ -118,9 +118,9 @@
             </div>
         </section>
 
-        <section class="border-b border-white/[0.06] py-10 sm:py-12" aria-labelledby="race-chart">
+        <section class="border-b border-white/[0.06] py-10 sm:py-12" aria-labelledby="standings-chart">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <h2 id="race-chart" class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Season Race Position</h2>
+                <h2 id="standings-chart" class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Season Match Standings</h2>
                 <div class="mt-5 charge-glass rounded-2xl p-5 sm:p-6">
                     <div class="grid grid-cols-6 gap-3">
                         @foreach ($matchPositions as $entry)
