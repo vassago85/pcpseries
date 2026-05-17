@@ -1,3 +1,15 @@
+FROM node:22-bookworm-slim AS frontend-build
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+RUN npm ci
+
+COPY resources ./resources
+COPY public ./public
+COPY vite.config.js ./
+RUN npm run build
+
 FROM php:8.4-fpm-alpine3.20
 
 RUN apk add --no-cache \
@@ -12,8 +24,6 @@ RUN apk add --no-cache \
     icu-libs \
     sqlite-dev \
     linux-headers \
-    nodejs \
-    npm \
     tzdata \
     $PHPIZE_DEPS
 
@@ -41,7 +51,7 @@ COPY . .
 
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
-RUN npm ci && npm run build && rm -rf node_modules
+COPY --from=frontend-build /app/public/build ./public/build
 
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 775 /var/www/html/storage \
