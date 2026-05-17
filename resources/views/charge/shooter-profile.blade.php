@@ -26,13 +26,44 @@
             ['name' => 'Bushveld Precision', 'type' => '90 Round', 'date' => '02 Jun 2026', 'place' => '2nd', 'points' => 82, 'hit' => '91.1%'],
         ];
 
-        $badges = ['Top 3 Season Rank', 'High Hit %', 'Clean Stage Specialist', 'Fastest Reset'];
+        $earnedBadges = [
+            [
+                'name' => 'Clean Stage',
+                'icon' => 'target',
+                'desc' => 'Completed a full stage with zero misses.',
+                'rule' => 'stage.misses = 0',
+            ],
+            [
+                'name' => 'Top 10 Finish',
+                'icon' => 'trophy',
+                'desc' => 'Finished inside the top 10 overall on a scored match day.',
+                'rule' => 'match.overall_rank <= 10',
+            ],
+            [
+                'name' => 'Fast Climber',
+                'icon' => 'trending-up',
+                'desc' => 'Gained rank quickly over consecutive matches in the same season.',
+                'rule' => 'season.rank_delta <= -3 across last 3 matches',
+            ],
+            [
+                'name' => 'Gearhead',
+                'icon' => 'settings',
+                'desc' => 'Profile includes complete rifle, optic, ammo and tune configuration.',
+                'rule' => 'profile.setup_fields_complete = true',
+            ],
+            [
+                'name' => 'First Round Impact',
+                'icon' => 'bar-chart',
+                'desc' => 'Strong first-match performance versus field median.',
+                'rule' => 'first_match.points_percentile >= 70',
+            ],
+        ];
 
         $comparison = [
             ['metric' => 'Average Hit %', 'shooter' => 91.6, 'division' => 86.9],
             ['metric' => 'Points per Match', 'shooter' => 80.3, 'division' => 72.1],
             ['metric' => 'Stage Win Rate', 'shooter' => 38.0, 'division' => 25.0],
-            ['metric' => 'Penalty Rate', 'shooter' => 3.2, 'division' => 5.6],
+            ['metric' => 'First-Round Impact %', 'shooter' => 74.0, 'division' => 58.0],
         ];
 
         $activityFeed = [
@@ -61,7 +92,7 @@
                             <div class="flex flex-wrap items-center gap-3">
                                 <h1 id="shooter-hero" class="text-4xl font-bold tracking-tight text-white sm:text-5xl">Johan van Wyk</h1>
                                 <span class="rounded-full border border-charge-fx/40 bg-charge-fx/15 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-charge-fx">
-                                    Rank #2
+                                    Rank #1
                                 </span>
                             </div>
                             <p class="mt-2 text-sm text-zinc-400">Open PCP Division <span class="mx-2 text-zinc-600">•</span> Gauteng</p>
@@ -192,16 +223,58 @@
 
         <section class="border-b border-white/[0.06] py-10 sm:py-12" aria-labelledby="badges">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <h2 id="badges" class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Achievement Badges</h2>
-                <div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-                    @foreach ($badges as $badge)
-                        <article class="charge-glass rounded-xl p-4 text-center">
-                            <span class="mx-auto flex h-11 w-11 items-center justify-center rounded-full border border-charge-element/30 bg-charge-element/10 text-charge-element">
-                                @include('charge.partials.icons', ['name' => 'trophy', 'class' => 'h-5 w-5'])
-                            </span>
-                            <p class="mt-3 text-sm font-semibold text-white">{{ $badge }}</p>
+                <div class="flex flex-wrap items-end justify-between gap-3">
+                    <h2 id="badges" class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Badge Progression</h2>
+                    <p class="font-mono text-[10px] uppercase tracking-wider text-zinc-500">Icons + descriptions + unlock logic</p>
+                </div>
+                <div class="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+                    @foreach ($earnedBadges as $badge)
+                        <article class="charge-glass charge-glass-hover rounded-xl p-4">
+                            <div class="flex items-start gap-3">
+                                <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-charge-fx/30 bg-charge-fx/10 text-charge-fx">
+                                    @include('charge.partials.icons', ['name' => $badge['icon'], 'class' => 'h-5 w-5'])
+                                </span>
+                                <div>
+                                    <h3 class="text-sm font-bold text-white">{{ $badge['name'] }}</h3>
+                                    <p class="mt-1 text-xs leading-relaxed text-zinc-400">{{ $badge['desc'] }}</p>
+                                </div>
+                            </div>
+                            <p class="mt-3 rounded border border-white/[0.08] bg-black/30 px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-wide text-zinc-500">
+                                Trigger: {{ $badge['rule'] }}
+                            </p>
                         </article>
                     @endforeach
+                </div>
+
+                <div class="mt-4 grid gap-3 lg:grid-cols-3">
+                    <article class="charge-glass rounded-xl p-4 lg:col-span-2">
+                        <p class="font-mono text-[10px] uppercase tracking-wider text-zinc-500">In Progress</p>
+                        <div class="mt-3 space-y-3">
+                            <div>
+                                <div class="mb-1 flex items-center justify-between text-sm">
+                                    <span class="text-zinc-300">Hot Streak</span>
+                                    <span class="font-mono text-zinc-500">2/5 matches</span>
+                                </div>
+                                <div class="h-2.5 overflow-hidden rounded-full bg-black/40">
+                                    <div class="h-full w-[40%] rounded-full bg-charge-fx"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-1 flex items-center justify-between text-sm">
+                                    <span class="text-zinc-300">Head Hunter</span>
+                                    <span class="font-mono text-zinc-500">8/10 top-head targets</span>
+                                </div>
+                                <div class="h-2.5 overflow-hidden rounded-full bg-black/40">
+                                    <div class="h-full w-[80%] rounded-full bg-charge-element"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="charge-glass rounded-xl p-4">
+                        <p class="font-mono text-[10px] uppercase tracking-wider text-zinc-500">Hidden</p>
+                        <p class="mt-3 text-2xl font-bold text-white">6</p>
+                        <p class="mt-1 text-sm text-zinc-400">Undiscovered badges remain in this division.</p>
+                    </article>
                 </div>
             </div>
         </section>
