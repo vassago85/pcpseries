@@ -10,7 +10,7 @@
         <a href="{{ $homeRoute }}" class="group flex items-center gap-3">
             <span class="flex h-9 w-9 items-center justify-center rounded-lg border border-charge-fx/30 bg-charge-fx/10 font-mono text-xs font-bold text-charge-fx transition group-hover:bg-charge-fx/20">55</span>
             <span class="flex flex-col leading-tight">
-                <span class="text-lg font-bold tracking-[0.2em] text-white">FIVEFIVE</span>
+                <span class="text-lg font-bold tracking-[0.2em] text-white">FIVE·FIVE</span>
                 <span class="hidden text-[9px] font-medium tracking-wide text-zinc-500 sm:block">Air. Rimfire. Precision.</span>
             </span>
         </a>

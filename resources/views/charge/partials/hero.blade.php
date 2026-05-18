@@ -7,7 +7,11 @@
                 Powered by FX Airguns &amp; Element Optics
             </p>
 
-            <h1 id="fivefive-hero" class="charge-headline">FIVEFIVE</h1>
+            <h1 id="fivefive-hero" class="charge-headline">FIVE·FIVE</h1>
+
+            <p class="mt-2 font-mono text-[10px] uppercase tracking-[0.35em] text-zinc-500">
+                Spoken: Five Point Five
+            </p>
 
             <p class="mt-4 text-xl font-medium italic tracking-tight text-zinc-200 sm:text-2xl">
                 Air. Rimfire. Precision.

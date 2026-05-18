@@ -1,6 +1,6 @@
 @extends('layouts.charge')
 
-@section('title', 'FIVEFIVE Shooter Profile — Match Performance')
+@section('title', 'FIVE·FIVE Shooter Profile — Match Performance')
 
 @section('content')
     @php
