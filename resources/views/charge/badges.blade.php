@@ -1,6 +1,6 @@
 @extends('layouts.charge')
 
-@section('title', 'PLENUM Badges — Shooter Progression Identity')
+@section('title', 'FIVEFIVE Badges — Shooter Progression Identity')
 
 @section('content')
     @php
@@ -30,7 +30,7 @@
                     ['name' => 'Breakthrough', 'desc' => 'First top-5 finish in division.', 'rule' => 'first(match.overall_rank <= 5)', 'status' => 'in_progress'],
                     ['name' => 'Rising Shooter', 'desc' => 'Sustained upward trend in points per match.', 'rule' => 'ppm trend positive over 4 matches', 'status' => 'in_progress'],
                     ['name' => 'Hot Streak', 'desc' => 'Three high-scoring matches in a row.', 'rule' => 'streak.high_score_matches >= 3', 'status' => 'in_progress'],
-                    ['name' => 'On The Charge', 'desc' => 'Gain 5+ standings positions in one season.', 'rule' => 'season.rank_delta_total <= -5', 'status' => 'locked'],
+                    ['name' => 'On The Rise', 'desc' => 'Gain 5+ standings positions in one season.', 'rule' => 'season.rank_delta_total <= -5', 'status' => 'locked'],
                 ],
             ],
             [
@@ -51,7 +51,7 @@
                 'icon' => 'calendar',
                 'accent' => 'fx',
                 'badges' => [
-                    ['name' => 'First Deployment', 'desc' => 'Complete first scored PLENUM match.', 'rule' => 'match_count >= 1', 'status' => 'earned'],
+                    ['name' => 'First Deployment', 'desc' => 'Complete first scored FIVEFIVE match.', 'rule' => 'match_count >= 1', 'status' => 'earned'],
                     ['name' => 'Season Regular', 'desc' => 'Compete in most scheduled matches.', 'rule' => 'season.attendance_rate >= 80%', 'status' => 'earned'],
                     ['name' => 'Road Warrior', 'desc' => 'Compete across multiple venues.', 'rule' => 'unique_venues >= 3', 'status' => 'earned'],
                     ['name' => 'Traveller', 'desc' => 'Match entries outside home province.', 'rule' => 'away_matches >= 2', 'status' => 'in_progress'],
@@ -77,18 +77,18 @@
                 'icon' => 'trophy',
                 'accent' => 'element',
                 'badges' => [
-                    ['name' => 'PLENUM Elite', 'desc' => 'Top-tier multi-match season performer.', 'rule' => 'season.overall_rank <= 5', 'status' => 'locked'],
+                    ['name' => 'FIVEFIVE Elite', 'desc' => 'Top-tier multi-match season performer.', 'rule' => 'season.overall_rank <= 5', 'status' => 'locked'],
                     ['name' => 'Grand Champion', 'desc' => 'Finish season as overall #1.', 'rule' => 'season.overall_rank = 1', 'status' => 'locked'],
                     ['name' => 'Division Champion', 'desc' => 'Finish season as division #1.', 'rule' => 'season.division_rank = 1', 'status' => 'locked'],
                     ['name' => 'Hall of Fame', 'desc' => 'Sustained elite finishes over multiple seasons.', 'rule' => 'elite_seasons >= 3', 'status' => 'locked'],
-                    ['name' => 'Legend Status', 'desc' => 'Long-term top-tier PLENUM impact.', 'rule' => 'career.legend_score >= threshold', 'status' => 'locked'],
+                    ['name' => 'Legend Status', 'desc' => 'Long-term top-tier FIVEFIVE impact.', 'rule' => 'career.legend_score >= threshold', 'status' => 'locked'],
                 ],
             ],
         ];
 
         $sampleShooter = [
-            'name' => 'Johan van Wyk',
-            'division' => 'Open PCP Division',
+            'name' => 'Ethan Kruger',
+            'division' => 'PCP Discipline',
             'badges_earned' => 12,
             'earned' => ['Clean Stage', 'Top 10 Finish', 'Fast Climber', 'Gearhead', 'First Round Impact'],
             'in_progress' => [

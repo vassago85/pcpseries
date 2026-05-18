@@ -1,6 +1,6 @@
 @extends('layouts.charge')
 
-@section('title', 'PLENUM — South African PCP Precision Series')
+@section('title', 'FIVEFIVE — Air. Rimfire. Precision.')
 
 @section('content')
     @include('charge.partials.nav')

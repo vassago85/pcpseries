@@ -3,7 +3,7 @@
         <p class="font-mono text-[10px] uppercase tracking-[0.35em] text-zinc-500">Operations</p>
         <h2 id="admin-title" class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Admin Experience</h2>
         <p class="mt-4 max-w-xl text-sm text-zinc-400">
-            Built for PLENUM match control — minimal steps, clean administration, and future scoring integrations.
+            Built for FIVEFIVE match control across air and rimfire disciplines with minimal steps, clean administration, and future scoring integrations.
         </p>
 
         <div class="mt-10 overflow-x-auto pb-2">

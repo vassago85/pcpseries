@@ -40,7 +40,9 @@ class AppServiceProvider extends ServiceProvider
             'charge.partials.hero',
             'charge.partials.leaderboard',
         ], function ($view): void {
-            $view->with('standings', require resource_path('views/charge/data/standings.php'));
+            $leaderboards = require resource_path('views/charge/data/standings.php');
+            $view->with('leaderboards', $leaderboards);
+            $view->with('standings', $leaderboards['overall']);
         });
     }
 }

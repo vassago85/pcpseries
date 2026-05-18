@@ -8,7 +8,7 @@
 
             <div class="relative max-w-2xl">
                 <h2 id="next-match-title" class="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-                    PLENUM: Legends Farm
+                    FIVEFIVE: Legends Farm
                 </h2>
                 <div class="mt-6 flex flex-wrap gap-5 text-sm text-zinc-400">
                     <span class="inline-flex items-center gap-2">
@@ -17,7 +17,7 @@
                     </span>
                     <span class="inline-flex items-center gap-2 font-mono">
                         @include('charge.partials.icons', ['name' => 'target', 'class' => 'h-4 w-4 text-charge-element'])
-                        96 Round Course
+                        96 Stage Points
                     </span>
                 </div>
                 <p class="mt-4 max-w-md text-zinc-400">PRS-style barricade and positional stages.</p>

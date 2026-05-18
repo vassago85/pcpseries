@@ -1,6 +1,6 @@
 @extends('layouts.charge')
 
-@section('title', 'PLENUM Shooter Profile — Match Performance')
+@section('title', 'FIVEFIVE Shooter Profile — Match Performance')
 
 @section('content')
     @php
@@ -85,17 +85,17 @@
                     <div class="grid gap-8 lg:grid-cols-[auto_1fr]">
                         <div class="mx-auto h-28 w-28 rounded-2xl border border-white/15 bg-gradient-to-br from-charge-fx/35 to-charge-element/20 p-1 sm:h-36 sm:w-36 lg:mx-0">
                             <div class="flex h-full w-full items-center justify-center rounded-xl bg-black/60 font-mono text-3xl font-bold text-white">
-                                JVW
+                                EKR
                             </div>
                         </div>
                         <div>
                             <div class="flex flex-wrap items-center gap-3">
-                                <h1 id="shooter-hero" class="text-4xl font-bold tracking-tight text-white sm:text-5xl">Johan van Wyk</h1>
+                                <h1 id="shooter-hero" class="text-4xl font-bold tracking-tight text-white sm:text-5xl">Ethan Kruger</h1>
                                 <span class="rounded-full border border-charge-fx/40 bg-charge-fx/15 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-charge-fx">
                                     Rank #1
                                 </span>
                             </div>
-                            <p class="mt-2 text-sm text-zinc-400">Open PCP Division <span class="mx-2 text-zinc-600">•</span> Gauteng</p>
+                            <p class="mt-2 text-sm text-zinc-400">PCP Discipline <span class="mx-2 text-zinc-600">•</span> Gauteng</p>
 
                             <div class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
                                 <article class="rounded-lg border border-white/[0.08] bg-black/30 p-3">
