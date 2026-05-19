@@ -15,15 +15,19 @@
         <div class="flex flex-col justify-center">
             <p class="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-zinc-300">
                 <span class="h-1.5 w-1.5 rounded-full bg-pcp-fx"></span>
-                Official FX Airguns &amp; Element Optics Series Partner Showcase
+                Powered by FX Airguns &amp; Element Optics
             </p>
             <h1 id="hero-heading" class="text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-                Precision.<br>
-                <span class="text-zinc-400">Pressure.</span><br>
-                Performance.
+                FIVE·FIVE
             </h1>
+            <p class="mt-2 font-mono text-[10px] uppercase tracking-[0.35em] text-zinc-500">
+                Spoken: Five Point Five
+            </p>
+            <p class="mt-4 text-xl font-medium italic tracking-tight text-zinc-200 sm:text-2xl">
+                Air. Rimfire. Precision.
+            </p>
             <p class="mt-6 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg">
-                The home of PRS-style PCP competition in South Africa. Register for matches, follow rankings, track your season and compete against the country's best shooters.
+                One leaderboard. Two disciplines. Unlimited competition.
             </p>
             <div class="mt-8 flex flex-wrap gap-3">
                 <a href="#matches" class="inline-flex items-center justify-center rounded-lg bg-pcp-fx px-6 py-3 text-sm font-semibold text-black transition hover:bg-pcp-fx/90">
@@ -41,7 +45,7 @@
                 <div class="relative flex min-h-[200px] items-end justify-center px-4 pt-6 sm:min-h-[240px]">
                     <img
                         src="{{ asset('images/pcp/hero-fx-rifle.webp') }}"
-                        alt="FX precision PCP rifle, official series partner equipment"
+                        alt="FX precision competition rifle and partner equipment"
                         width="800"
                         height="400"
                         class="max-h-[220px] w-full max-w-md object-contain object-bottom drop-shadow-[0_20px_40px_rgba(0,0,0,0.55)] sm:max-h-[260px]"
@@ -51,7 +55,7 @@
                     >
                 </div>
                 <figcaption class="relative border-t border-white/10 px-4 py-3">
-                    <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-pcp-fx">Official partner</p>
+                    <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-pcp-fx">Powered by</p>
                     <p class="mt-0.5 text-sm font-medium text-white">FX Airguns <span class="text-zinc-600">•</span> Element Optics</p>
                 </figcaption>
             </figure>

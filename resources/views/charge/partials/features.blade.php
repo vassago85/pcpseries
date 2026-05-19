@@ -6,7 +6,7 @@
         <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             @foreach ([
                 ['icon' => 'bar-chart', 'title' => 'Track Season Performance', 'desc' => 'Points, form and progression across every round.'],
-                ['icon' => 'trophy', 'title' => 'View Rankings', 'desc' => 'Overall, PCP and Rimfire standings after each match.'],
+                ['icon' => 'trophy', 'title' => 'View Leaderboard', 'desc' => 'Overall, PCP and Rimfire standings after each match.'],
                 ['icon' => 'user', 'title' => 'Shooter Profiles', 'desc' => 'Competition history across both disciplines.'],
                 ['icon' => 'settings', 'title' => 'Equipment Setups', 'desc' => 'Rifle, optic and load data tied to results.'],
             ] as $card)

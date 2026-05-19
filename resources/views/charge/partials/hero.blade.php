@@ -18,9 +18,7 @@
             </p>
 
             <p class="mt-5 max-w-lg text-base leading-relaxed text-zinc-400 sm:text-lg">
-                One leaderboard.<br>
-                Two disciplines.<br>
-                Unlimited competition.
+                One leaderboard. Two disciplines. Unlimited competition.
             </p>
 
             <div class="mt-9 flex flex-wrap gap-3">
@@ -28,7 +26,7 @@
                     View Matches
                 </a>
                 <a href="#rankings" class="inline-flex items-center justify-center rounded-lg border border-white/15 bg-transparent px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition hover:border-white/30 hover:bg-white/5">
-                    View Rankings
+                    View Leaderboard
                 </a>
             </div>
         </div>
@@ -67,7 +65,7 @@
                         <p class="text-[10px] font-semibold uppercase tracking-wider text-charge-element">Next Match</p>
                         <p class="text-sm font-semibold text-white">Legends Farm</p>
                     </div>
-                    <p class="font-mono text-[10px] text-zinc-400">96 Round Match</p>
+                    <p class="font-mono text-[10px] text-zinc-400">96 Stage Points</p>
                 </div>
             </div>
         </aside>

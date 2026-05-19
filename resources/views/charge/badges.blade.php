@@ -88,7 +88,7 @@
 
         $sampleShooter = [
             'name' => 'Ethan Kruger',
-            'division' => 'PCP Discipline',
+            'division' => 'Precision Discipline',
             'badges_earned' => 12,
             'earned' => ['Clean Stage', 'Top 10 Finish', 'Fast Climber', 'Gearhead', 'First Round Impact'],
             'in_progress' => [

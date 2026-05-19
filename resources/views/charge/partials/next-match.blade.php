@@ -23,7 +23,7 @@
                 <p class="mt-4 max-w-md text-zinc-400">PRS-style barricade and positional stages.</p>
                 <div class="mt-9 flex flex-wrap gap-3">
                     <a href="#" class="inline-flex rounded-lg bg-charge-element px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-charge-element/90">
-                        Register Interest
+                        Enter Match
                     </a>
                     <a href="#" class="inline-flex rounded-lg border border-white/15 px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-white/5">
                         View Match Details

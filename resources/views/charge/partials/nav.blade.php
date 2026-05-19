@@ -16,7 +16,7 @@
         </a>
         <nav class="hidden items-center gap-8 text-sm font-medium text-zinc-400 md:flex" aria-label="Primary">
             <a href="{{ $homeRoute }}#matches" class="transition hover:text-white">Matches</a>
-            <a href="{{ $homeRoute }}#rankings" class="transition hover:text-white">Rankings</a>
+            <a href="{{ $homeRoute }}#rankings" class="transition hover:text-white">Leaderboard</a>
             <a href="{{ $homeRoute }}#season" class="transition hover:text-white">Season</a>
             <a href="{{ $shooterRoute }}" class="transition hover:text-white">Shooter</a>
             <a href="{{ $badgesRoute }}" class="transition hover:text-white">Badges</a>

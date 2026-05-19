@@ -1,6 +1,6 @@
 @extends('layouts.pcp-mockup')
 
-@section('title', 'PCP Series South Africa — Precision PCP Competition')
+@section('title', 'FIVE·FIVE — Air. Rimfire. Precision.')
 
 @section('content')
     @include('pcp-series.partials.nav')

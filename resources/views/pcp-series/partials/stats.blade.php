@@ -4,7 +4,7 @@
             ['label' => '2026 Season', 'value' => 'ACTIVE'],
             ['label' => '6 Match Series', 'value' => 'NATIONAL'],
             ['label' => 'PRS-Style Format', 'value' => 'BARRICADE'],
-            ['label' => 'PCP Precision', 'value' => 'OPEN CLASS'],
+            ['label' => 'National Leaderboard', 'value' => 'OPEN FIELD'],
         ] as $stat)
             <div class="bg-pcp-bg px-6 py-8 text-center md:py-10">
                 <p class="font-mono text-lg font-semibold tracking-tight text-white sm:text-xl">{{ $stat['value'] }}</p>

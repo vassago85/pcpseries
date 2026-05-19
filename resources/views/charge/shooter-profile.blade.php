@@ -95,7 +95,7 @@
                                     Rank #1
                                 </span>
                             </div>
-                            <p class="mt-2 text-sm text-zinc-400">PCP Discipline <span class="mx-2 text-zinc-600">•</span> Gauteng</p>
+                            <p class="mt-2 text-sm text-zinc-400">Precision Discipline <span class="mx-2 text-zinc-600">•</span> Gauteng</p>
 
                             <div class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
                                 <article class="rounded-lg border border-white/[0.08] bg-black/30 p-3">

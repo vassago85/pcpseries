@@ -10,8 +10,8 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mb-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
-                <p class="text-xs font-semibold uppercase tracking-[0.25em] text-pcp-fx">Season standings</p>
-                <h2 id="rankings-heading" class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Current Season Race</h2>
+                <p class="text-xs font-semibold uppercase tracking-[0.25em] text-pcp-fx">Standings</p>
+                <h2 id="rankings-heading" class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Overall Leaderboard</h2>
             </div>
             <p class="font-mono text-sm text-zinc-500">Updated after Match 4</p>
         </div>
