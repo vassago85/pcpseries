@@ -1,6 +1,6 @@
 @extends('layouts.charge')
 
-@section('title', 'FIVE·FIVE Badges — Shooter Progression Identity')
+@section('title', 'PARC Rankings — Shooter Progression Identity')
 
 @section('content')
     @php
@@ -51,7 +51,7 @@
                 'icon' => 'calendar',
                 'accent' => 'fx',
                 'badges' => [
-                    ['name' => 'First Deployment', 'desc' => 'Complete first scored FIVE·FIVE match.', 'rule' => 'match_count >= 1', 'status' => 'earned'],
+                    ['name' => 'First Deployment', 'desc' => 'Complete first scored PARC match.', 'rule' => 'match_count >= 1', 'status' => 'earned'],
                     ['name' => 'Season Regular', 'desc' => 'Compete in most scheduled matches.', 'rule' => 'season.attendance_rate >= 80%', 'status' => 'earned'],
                     ['name' => 'Road Warrior', 'desc' => 'Compete across multiple venues.', 'rule' => 'unique_venues >= 3', 'status' => 'earned'],
                     ['name' => 'Traveller', 'desc' => 'Match entries outside home province.', 'rule' => 'away_matches >= 2', 'status' => 'in_progress'],
@@ -77,11 +77,11 @@
                 'icon' => 'trophy',
                 'accent' => 'element',
                 'badges' => [
-                    ['name' => 'FIVE·FIVE Elite', 'desc' => 'Top-tier multi-match season performer.', 'rule' => 'season.overall_rank <= 5', 'status' => 'locked'],
+                    ['name' => 'PARC Elite', 'desc' => 'Top-tier multi-match season performer.', 'rule' => 'season.overall_rank <= 5', 'status' => 'locked'],
                     ['name' => 'Grand Champion', 'desc' => 'Finish season as overall #1.', 'rule' => 'season.overall_rank = 1', 'status' => 'locked'],
                     ['name' => 'Division Champion', 'desc' => 'Finish season as division #1.', 'rule' => 'season.division_rank = 1', 'status' => 'locked'],
                     ['name' => 'Hall of Fame', 'desc' => 'Sustained elite finishes over multiple seasons.', 'rule' => 'elite_seasons >= 3', 'status' => 'locked'],
-                    ['name' => 'Legend Status', 'desc' => 'Long-term top-tier FIVE·FIVE impact.', 'rule' => 'career.legend_score >= threshold', 'status' => 'locked'],
+                    ['name' => 'Legend Status', 'desc' => 'Long-term top-tier PARC impact.', 'rule' => 'career.legend_score >= threshold', 'status' => 'locked'],
                 ],
             ],
         ];

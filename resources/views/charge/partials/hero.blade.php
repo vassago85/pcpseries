@@ -1,4 +1,4 @@
-<section class="relative overflow-hidden border-b border-white/[0.06]" aria-labelledby="fivefive-hero">
+<section class="relative overflow-hidden border-b border-white/[0.06]" aria-labelledby="parc-hero">
     <div class="charge-crosshair pointer-events-none absolute inset-0 opacity-40" aria-hidden="true"></div>
 
     <div class="relative mx-auto grid max-w-7xl gap-12 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-8 lg:py-20">
@@ -7,18 +7,14 @@
                 Powered by FX Airguns &amp; Element Optics
             </p>
 
-            <h1 id="fivefive-hero" class="charge-headline">FIVE·FIVE</h1>
+            <h1 id="parc-hero" class="charge-headline">PARC</h1>
 
             <p class="mt-2 font-mono text-[10px] uppercase tracking-[0.35em] text-zinc-500">
-                Spoken: Five Point Five
-            </p>
-
-            <p class="mt-4 text-xl font-medium italic tracking-tight text-zinc-200 sm:text-2xl">
-                Air. Rimfire. Precision.
+                Precision Airgun &amp; Rimfire Challenge
             </p>
 
             <p class="mt-5 max-w-lg text-base leading-relaxed text-zinc-400 sm:text-lg">
-                One leaderboard. Two disciplines. Unlimited competition.
+                One precision leaderboard for airgun and rimfire competition.
             </p>
 
             <div class="mt-9 flex flex-wrap gap-3">

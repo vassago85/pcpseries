@@ -41,6 +41,6 @@ fi
 
 chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
-echo "FIVE·FIVE ready — open http://localhost:8089/plenum or http://localhost:8089/charge"
+echo "PARC ready — open http://localhost:8089/plenum or http://localhost:8089/charge"
 
 exec /usr/bin/supervisord -c /etc/supervisord.conf

@@ -8,7 +8,7 @@
 
             <div class="relative max-w-2xl">
                 <h2 id="next-match-title" class="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-                    FIVE·FIVE: Legends Farm
+                    PARC: Legends Farm
                 </h2>
                 <div class="mt-6 flex flex-wrap gap-5 text-sm text-zinc-400">
                     <span class="inline-flex items-center gap-2">

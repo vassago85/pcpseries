@@ -18,23 +18,20 @@
                 Powered by FX Airguns &amp; Element Optics
             </p>
             <h1 id="hero-heading" class="text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-                FIVE·FIVE
+                PARC
             </h1>
             <p class="mt-2 font-mono text-[10px] uppercase tracking-[0.35em] text-zinc-500">
-                Spoken: Five Point Five
-            </p>
-            <p class="mt-4 text-xl font-medium italic tracking-tight text-zinc-200 sm:text-2xl">
-                Air. Rimfire. Precision.
+                Precision Airgun &amp; Rimfire Challenge
             </p>
             <p class="mt-6 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg">
-                One leaderboard. Two disciplines. Unlimited competition.
+                One precision leaderboard for airgun and rimfire competition.
             </p>
             <div class="mt-8 flex flex-wrap gap-3">
                 <a href="#matches" class="inline-flex items-center justify-center rounded-lg bg-pcp-fx px-6 py-3 text-sm font-semibold text-black transition hover:bg-pcp-fx/90">
                     View Matches
                 </a>
                 <a href="#rankings" class="inline-flex items-center justify-center rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/10">
-                    View Rankings
+                    View Leaderboard
                 </a>
             </div>
         </div>

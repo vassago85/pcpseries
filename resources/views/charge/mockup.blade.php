@@ -1,6 +1,6 @@
 @extends('layouts.charge')
 
-@section('title', 'FIVE·FIVE — Air. Rimfire. Precision.')
+@section('title', 'PARC — Precision Airgun & Rimfire Challenge')
 
 @section('content')
     @include('charge.partials.nav')

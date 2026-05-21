@@ -1,6 +1,6 @@
 @extends('layouts.pcp-mockup')
 
-@section('title', 'FIVE·FIVE — Air. Rimfire. Precision.')
+@section('title', 'PARC — Precision Airgun & Rimfire Challenge')
 
 @section('content')
     @include('pcp-series.partials.nav')

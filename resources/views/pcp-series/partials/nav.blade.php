@@ -5,8 +5,8 @@
                 @include('pcp-series.partials.icons', ['name' => 'crosshair', 'class' => 'h-4 w-4 text-pcp-fx'])
             </span>
             <span class="flex flex-col leading-none">
-                <span class="text-sm font-semibold tracking-wide text-white">FIVE·FIVE</span>
-                <span class="text-[10px] font-medium uppercase tracking-[0.2em] text-zinc-500">Air. Rimfire. Precision.</span>
+                <span class="text-sm font-semibold tracking-wide text-white">PARC</span>
+                <span class="text-[10px] font-medium uppercase tracking-[0.2em] text-zinc-500">Precision Airgun &amp; Rimfire Challenge</span>
             </span>
             <span class="hidden items-center gap-1 sm:flex" aria-hidden="true">
                 <span class="h-1.5 w-1.5 rounded-full bg-pcp-fx"></span>

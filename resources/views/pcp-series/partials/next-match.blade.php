@@ -7,7 +7,7 @@
             <div class="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-pcp-fx/10 to-transparent" aria-hidden="true"></div>
             <div class="relative max-w-2xl">
                 <h3 class="text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">
-                    FIVE·FIVE: Legends Farm
+                    PARC: Legends Farm
                 </h3>
                 <div class="mt-6 flex flex-wrap gap-4 text-sm text-zinc-400">
                     <span class="inline-flex items-center gap-2">

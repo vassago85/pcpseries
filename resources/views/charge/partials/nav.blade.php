@@ -8,10 +8,10 @@
 <header class="sticky top-0 z-50 border-b border-white/[0.06] bg-charge-bg/70 backdrop-blur-2xl">
     <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <a href="{{ $homeRoute }}" class="group flex items-center gap-3">
-            <span class="flex h-9 w-9 items-center justify-center rounded-lg border border-charge-fx/30 bg-charge-fx/10 font-mono text-xs font-bold text-charge-fx transition group-hover:bg-charge-fx/20">55</span>
+            <span class="flex h-9 w-9 items-center justify-center rounded-lg border border-charge-fx/30 bg-charge-fx/10 font-mono text-xs font-bold text-charge-fx transition group-hover:bg-charge-fx/20">PARC</span>
             <span class="flex flex-col leading-tight">
-                <span class="text-lg font-bold tracking-[0.2em] text-white">FIVE·FIVE</span>
-                <span class="hidden text-[9px] font-medium tracking-wide text-zinc-500 sm:block">Air. Rimfire. Precision.</span>
+                <span class="text-lg font-bold tracking-[0.2em] text-white">PARC</span>
+                <span class="hidden text-[9px] font-medium tracking-wide text-zinc-500 sm:block">Precision Airgun &amp; Rimfire Challenge</span>
             </span>
         </a>
         <nav class="hidden items-center gap-8 text-sm font-medium text-zinc-400 md:flex" aria-label="Primary">
