@@ -3,6 +3,7 @@
     $homeRoute = $isPlenum ? route('plenum') : route('charge');
     $shooterRoute = $isPlenum ? route('plenum.shooter') : route('charge.shooter');
     $badgesRoute = $isPlenum ? route('plenum.badges') : route('charge.badges');
+    $proposalRoute = route('proposal');
 @endphp
 
 <header class="sticky top-0 z-50 border-b border-white/[0.06] bg-charge-bg/70 backdrop-blur-2xl">
@@ -20,6 +21,7 @@
             <a href="{{ $homeRoute }}#season" class="transition hover:text-white">Season</a>
             <a href="{{ $shooterRoute }}" class="transition hover:text-white">Shooter</a>
             <a href="{{ $badgesRoute }}" class="transition hover:text-white">Badges</a>
+            <a href="{{ $proposalRoute }}" class="transition hover:text-white">Proposal</a>
         </nav>
         <a href="{{ $homeRoute }}#matches" class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white transition hover:border-charge-fx/40 hover:bg-charge-fx/10">
             View Matches
